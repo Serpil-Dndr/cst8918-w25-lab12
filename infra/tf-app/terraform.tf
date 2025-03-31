@@ -13,9 +13,11 @@ terraform {
     storage_account_name = "phar0053githubactions"
     container_name       = "tfstate"
     key                  = "prod.app.tfstate"
+    use_oidc             = true 
   }
 }
 
 provider "azurerm" {
   features {}
+   use_oidc = true
 }
